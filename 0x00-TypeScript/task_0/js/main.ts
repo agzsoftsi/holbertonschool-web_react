@@ -20,3 +20,16 @@ const stud2: Student = {
 };
 
 const studTable: Array<Student> = [stud1, stud2];
+const body = document.getElementsByTagName("body")[0];
+const table = document.createElement("table");
+
+studTable.forEach((stud) => {
+  const row = table.insertRow(0);
+  const cell1 = row.insertCell(0);
+  const cell2 = row.insertCell(1);
+
+  cell1.innerHTML = stud.firstName;
+  cell2.innerHTML = stud.location;
+});
+
+body.append(table);
