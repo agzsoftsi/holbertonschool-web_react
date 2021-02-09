@@ -19,11 +19,11 @@ const stud2: Student = {
   location: "Palmira",
 };
 
-const studTable: Array<Student> = [stud1, stud2];
+const studentsList: Array<Student> = [stud1, stud2];
 const body = document.getElementsByTagName("body")[0];
 const table = document.createElement("table");
 
-studTable.forEach((stud) => {
+studentsList.forEach((stud) => {
   const row = table.insertRow(0);
   const cell1 = row.insertCell(0);
   const cell2 = row.insertCell(1);
