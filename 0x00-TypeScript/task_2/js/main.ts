@@ -45,13 +45,11 @@ export function createEmployee(salary: number | string): Teacher | Director {
   return new Director();
 }
 
-export function isDirector(employee: Teacher | Director): employee is Director {
+export function isDirector(employee: TeacherInterface | DirectorInterface): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
-export function executeWork(
-  employee: DirectorInterface | TeacherInterface
-): void {
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
   let msg;
 
   if (isDirector(employee)) {
@@ -61,14 +59,15 @@ export function executeWork(
   }
 
   console.log(msg);
+  return msg;
 }
 
 type Subjects = "Math" | "History";
 
-function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass:Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
   }
-
-  return "Teaching History";
 }
