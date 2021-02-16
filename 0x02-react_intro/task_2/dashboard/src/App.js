@@ -11,6 +11,9 @@ function App() {
       </header>
       <body className="App-body">
         <p>Login to access the full dashboard</p>
+        <label for="email">E-mail</label><input id="email" type="email"/>
+        <label for="password">Password</label><input id="password" type="password"/>
+        <button id="buttom_ok">OK</button>
       </body>
       <footer className="App-footer">
         <p>Copyright {getFullYear()} - {getFooterCopy(true)} </p>
