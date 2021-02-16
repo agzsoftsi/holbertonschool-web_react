@@ -3,3 +3,11 @@
     border-style: dashed;
     padding: 10px;
 }
+
+ul li[data-priority='default'] {
+    color: blue;
+  }
+  
+  ul li[data-priority='urgent'] {
+    color: red;
+  }
