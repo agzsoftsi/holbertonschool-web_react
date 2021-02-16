@@ -6,3 +6,7 @@ export const getFullYear = () => new Date().getFullYear();
 // When false, the function should return Holberton School main dashboard
 export const getFooterCopy = (isIndex) =>
   isIndex ? 'Holberton School' : 'Holberton School Main Dashboard';
+
+// getLatestNotification It accepts one argument isIndex(boolean). 
+export const getLatestNotification = () => 
+  '<strong>Urgent requirement</strong> - complete by EOD';
