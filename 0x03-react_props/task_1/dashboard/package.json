@@ -46,7 +46,8 @@
     "start-dev": "webpack serve --config ./config/webpack.config.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "webpack serve --mode development --config config/webpack.config.js"
+    "start": "webpack serve --mode development --config config/webpack.config.js",
+    "test-watch": "jest --watch"
   },
   "eslintConfig": {
     "extends": [

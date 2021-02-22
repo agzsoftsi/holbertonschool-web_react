@@ -1,23 +1,39 @@
+/*
+    
+    
+    
+    
+*/
 import { shallow } from 'enzyme';
 import React from "react";
 import App from './App';
+import Notifications from '../Notifications/Notifications';
+import Login from '../Login/Login';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
-describe("test App", () => {
-    //test that App renders without crashing
+
+
+describe("Test Suite App", () => {
+    // test that App renders without crashing
     it("renders without crashing", () => {
         shallow(<App />);
     });
+    // verify that App renders a div with the class App-header
     const wrapper = shallow(<App />);
-    //verify that App renders a div with the class App-header
-    xit("verify that App renders a div with the class App-header", () => {
-        expect(wrapper.find('div.App-header').exists()).toEqual(true);
+    it("Notifications", () => {
+        shallow(<Notifications />);
+        
     });
-    //verify that App renders a div with the class App-body
-    xit("verify that App renders a div with the class App-body", () => {
-        expect(wrapper.find('div.App-body').exists()).toEqual(true);
+    it("Header", () => {
+        shallow(<Header />);
     });
-    //verify that App renders a div with the class App-footer
-    xit("verify that App renders a div with the class App-footer", () => {
-        expect(wrapper.find('div.App-footer').exists()).toEqual(true);
+    // verify that App renders a div with the class App-body
+    it("Login", () => {
+        shallow(<Login />);
+    });
+    // verify that App renders a div with the class App-footer
+    it("Footer", () => {
+        shallow(<Footer />);
     });
 }); 

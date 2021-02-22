@@ -2,18 +2,16 @@ import { shallow } from 'enzyme';
 import React from "react";
 import Header from './Header';
 
-describe("test Header", () => {
+describe("Test Suite Header", () => {
     it("renders without crashing", () => {
         shallow(<Header />);
     });
     const wrapper = shallow(<Header />);
-    xit("verify that App renders a div with the class App-header", () => {
-        expect(wrapper.find('div.App-header').exists()).toEqual(true);
+    it("Verify that the components render img tags", () => {
+        expect(wrapper.find('img').exists()).toEqual(true);
+        expect(wrapper.find('h1').exists()).toEqual(true);
     });
-    xit("verify that App renders a div with the class App-body", () => {
-        expect(wrapper.find('div.App-body').exists()).toEqual(true);
+    it("Verify that the components render h1 tags", () => {
+        expect(wrapper.find('h1').exists()).toEqual(true);
     });
-    xit("verify that App renders a div with the class App-footer", () => {
-        expect(wrapper.find('div.App-footer').exists()).toEqual(true);
-    });
-}); 
+})
